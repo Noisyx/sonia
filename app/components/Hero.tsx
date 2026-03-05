@@ -5,16 +5,22 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section
-      className="relative flex items-center justify-center min-h-screen bg-black text-white overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(to bottom right, rgba(13,13,13,0.92), rgba(41,33,26,0.85)), url('/images/boutique-hero.jpg') center/cover no-repeat",
-      }}
-    >
+    <section className="relative flex items-center justify-center min-h-screen bg-black text-white overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 w-full h-full z-0"
+        aria-hidden="true"
+        style={{
+          backgroundImage:
+            "url('/images/Image Creator.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
       {/* Overlay to strengthen darkness */}
-      <div className="absolute inset-0 bg-black/60 z-0" aria-hidden="true" />
-      <div className="relative z-10 flex flex-col items-center">
+      <div className="absolute inset-0 bg-black/60 z-10" aria-hidden="true" />
+      <div className="relative z-20 flex flex-col items-center">
         <motion.h1
           className="text-4xl md:text-6xl font-serif font-bold tracking-tight mb-4 text-gold"
           initial={{ opacity: 0, y: 30 }}
